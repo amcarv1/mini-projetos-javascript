@@ -31,8 +31,7 @@ form.addEventListener('submit', function (evento) {
 
     // Exibindo o Resultado Caso os Valores dos Inputs Sejam Números.
     exibeResultado(`Seu IMC vale ${imc}. Você está ${nivelIMC(imc)}`, true);
-
-
+    
 });
 
 
@@ -57,7 +56,6 @@ function nivelIMC(imc) {
     if (imc >= 24.9) return `com ${nivel[2]}`
     if (imc >= 18.5) return `com o ${nivel[1]}`
     if (imc < 18.5)  return `Você está ${nivel[0]}`
-
 }
 
 
@@ -88,5 +86,4 @@ function exibeResultado(mensagem, valido) {
     paragrafo.innerHTML = mensagem; // Escrevendo no HTML a mensagem passada no parâmetro.
 
     resultado.appendChild(paragrafo); // Atribuindo a variável paragrafo ao corpo do HTML.
-
 }
