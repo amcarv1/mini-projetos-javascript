@@ -1,14 +1,8 @@
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  Capturando o Evento de Submit do Formulário HTML. -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 
-
-
 const form = document.querySelector('#formulario');     // Formulário capturado e atribuído a varíavel form.
 
-
-
 /* -=-=-=-=-=-=-=-= Parando o Evento de Submit para Captura dos Dados de Entrada e Exibição dos Resultados. -=-=-=-=-=-=-=-= */
-
-
 
 form.addEventListener('submit', function (evento) {
     evento.preventDefault();
@@ -24,10 +18,8 @@ form.addEventListener('submit', function (evento) {
     const valorInputAltura = Number(inputAltura.value);
 
 
-
     /* -=-=-=-= Calculando o Valor do IMC. -=-=-=-= */
     const imc = calculaIMC(valorInputPeso, valorInputAltura);
-
 
 
     /* -=-=-=-= Exibindo o Resultado do Cálculo do IMC. -=-=-=-=*/
@@ -44,14 +36,7 @@ form.addEventListener('submit', function (evento) {
 });
 
 
-
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-
-
-
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Seção das Funções. -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-
-
 
 // 1. Criando uma Função Especializada no Cálculo do IMC.
 
@@ -105,7 +90,3 @@ function exibeResultado(mensagem, valido) {
     resultado.appendChild(paragrafo); // Atribuindo a variável paragrafo ao corpo do HTML.
 
 }
-
-
-
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-= */
