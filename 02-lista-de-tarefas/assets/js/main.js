@@ -18,8 +18,7 @@ inputNovaTarefa.addEventListener('keypress', function(evento) {
     if (evento.key === 'Enter') {
         if (!inputNovaTarefa.value) return;
         criaTarefa(`${inputNovaTarefa.value}`);
-    }
-    
+    }    
 });
 
 
@@ -30,8 +29,7 @@ document.addEventListener('click', function(evento) {
     if (elemento.classList.contains('apagar')) {
         elemento.parentElement.remove();
         salvarTarefas();
-    }
-    
+    }  
 }); 
 
 /* Fim da Seção dos Eventos. */
@@ -100,4 +98,4 @@ function adicionaTarefasSalvas() {
 
 /* Fim da Seção das Funções */
 
-  adicionaTarefasSalvas(); // Chamando a função.
+adicionaTarefasSalvas(); // Chamando a função.
