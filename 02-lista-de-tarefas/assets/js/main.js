@@ -3,16 +3,17 @@ const btnTarefa = document.querySelector('.btn-add-tarefa');
 const tarefas = document.querySelector('.tarefas'); 
 
 
-/* Sessão dos Eventos */
+/* Seção dos Eventos */
 
-/* Primeiro Evento */
+// Primeiro Evento 
 btnTarefa.addEventListener('click', function(evento) {
     if (!inputNovaTarefa.value) return;
 
     criaTarefa(`${inputNovaTarefa.value}`);
 });
 
-/* Segundo Evento */
+
+// Segundo Evento 
 inputNovaTarefa.addEventListener('keypress', function(evento) {
     if (evento.key === 'Enter') {
         if (!inputNovaTarefa.value) return;
@@ -21,8 +22,8 @@ inputNovaTarefa.addEventListener('keypress', function(evento) {
     
 });
 
-/* Terceiro Evento */
 
+// Terceiro Evento 
 document.addEventListener('click', function(evento) {
     const elemento = evento.target;
 
@@ -30,9 +31,12 @@ document.addEventListener('click', function(evento) {
         elemento.parentElement.remove();
         salvarTarefas();
     }
+    
 }); 
 
-/* Sessão das Funções */
+/* Fim da Seção dos Eventos. */
+
+/* Seção das Funções */
 
 // Primeira Função.
 function criaTarefa(tarefa) {
@@ -66,6 +70,7 @@ function criaBotaoApagar(li) {
     li.appendChild(botaoApagar);
 }
 
+// Quinta Função
 function salvarTarefas() {
     const liTarefas = tarefas.querySelectorAll('li')
 
@@ -83,6 +88,7 @@ function salvarTarefas() {
     localStorage.setItem('tarefas', tarefasJSON);
 }
 
+// Sexta Função
 function adicionaTarefasSalvas() {
     const tarefas = localStorage.getItem('tarefas');
     const listaDeTarefas = JSON.parse(tarefas);
@@ -91,12 +97,7 @@ function adicionaTarefasSalvas() {
       criaTarefa(tarefa);
     }
   }
-  adicionaTarefasSalvas();
 
+/* Fim da Seção das Funções */
 
-
-
-
-
-
-
+  adicionaTarefasSalvas(); // Chamando a função.
